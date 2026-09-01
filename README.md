@@ -1,12 +1,13 @@
 # Tessium examples
 
-Runnable examples for [Tessium](https://tessium.dev), a realtime Solana data API.
-Each one is a single file you start with one command and watch print live
-on-chain events.
+**Tessium** is a realtime Solana data API. Open one WebSocket (`wss://api.tessium.dev/stream`), subscribe to the streams you need, and receive on-chain activity as structured events — launches, trades, migrations, transfers, and candles — without running your own Geyser or parser stack.
 
-One WebSocket connection gives you decoded launches, trades, transfers and
-candles. Set up the connection once, and the rest of your time goes into the
-trading logic.
+This repo has small, runnable Node and Python programs that print live events. One connection, then your time goes into trading logic instead of IDL glue.
+
+- Product: [tessium.dev](https://tessium.dev) · org: [github.com/tessiumdev](https://github.com/tessiumdev)
+- Docs: [API](https://tessium.dev/docs/) · [Quickstart](https://tessium.dev/docs/quickstart)
+- Blog: [tessium.dev/blog](https://tessium.dev/blog) · machine map: [llms.txt](https://tessium.dev/llms.txt)
+- LinkedIn: [company/tessiumdev](https://www.linkedin.com/company/tessiumdev)
 
 ## What you need
 
@@ -43,10 +44,14 @@ python 01-launch-to-trades/python/main.py
 
 ## Links
 
-- [tessium.dev](https://tessium.dev): what the service does
-- [Documentation](https://tessium.dev/docs): protocol, streams, filters
-- [Quickstart](https://tessium.dev/docs/quickstart): first event in a few minutes
-- [Pricing](https://tessium.dev/pricing): free and paid plans
+- [tessium.dev](https://tessium.dev) — product home
+- [GitHub org](https://github.com/tessiumdev) — profile and repos
+- [Documentation](https://tessium.dev/docs/) — protocol, streams, filters
+- [Quickstart](https://tessium.dev/docs/quickstart) — first event in a few minutes
+- [Blog](https://tessium.dev/blog) — parsed streams, filtering, pricing notes
+- [llms.txt](https://tessium.dev/llms.txt) — compact map for agents
+- [LinkedIn](https://www.linkedin.com/company/tessiumdev) — company page
+- [Pricing](https://tessium.dev/pricing) — free and paid plans
 
 ## License
 
