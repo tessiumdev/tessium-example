@@ -33,9 +33,12 @@ ws.onmessage = (e: MessageEvent) => {
 
     if (frame.op === 'error') {
         // Replay is a paid capability. Without it the live feed is all there is, so
-        // ask for that rather than stopping.
-        if (frame.feature === 'cursor') watchTrades()
-        else console.error(`${frame.code}: ${frame.message}`)
+        // ask for that rather than stopping — and say so, because the trades that
+        // made the launch worth watching happened before this subscription opened.
+        if (frame.feature === 'cursor') {
+            console.log('  replay is not on this plan; following from here, not from the launch')
+            watchTrades()
+        } else console.error(`${frame.code}: ${frame.message}`)
         return
     }
     if (frame.op !== 'event') return

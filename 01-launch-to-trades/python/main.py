@@ -33,8 +33,11 @@ async def main():
 
             if frame["op"] == "error":
                 # Replay is a paid capability. Without it the live feed is all
-                # there is, so ask for that rather than stopping.
+                # there is, so ask for that rather than stopping — and say so,
+                # because the trades that made the launch worth watching happened
+                # before this subscription opened.
                 if frame.get("feature") == "cursor":
+                    print("  replay is not on this plan; following from here, not from the launch")
                     await watch_trades()
                 else:
                     print(f"{frame['code']}: {frame['message']}")
